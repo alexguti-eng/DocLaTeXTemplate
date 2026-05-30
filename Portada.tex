@@ -15,6 +15,8 @@
 
 \usepackage{helvet}
 
+\usepackage{ccicons} % Para logotipos Creative Commons
+
 \usepackage{wallpaper}   % Para introducir el PDF con la portada
 \usepackage[absolute,overlay]{textpos}  % Par colocar texto o imágenes en posiciones exactas
 
@@ -112,14 +114,14 @@
 \renewcommand{\spanishlistfigurename}{Lista de figuras}
 \renewcommand{\spanishlisttablename}{Lista de tablas}
 
+% ============================================================
+% PORTADA
+% ============================================================
 
-
-
-
-
-% Comando que se encarga de componer la portada del TFG
-% mayo 2026 - Nueva portada Proyecto
 \definecolor{naranja}{RGB}{198,97,21}
+
+\newcommand{\Licencia}{CC BY-SA 4.0}
+
 \newcommand{\Portada}{ %
     \thispagestyle{empty}
     \ULCornerWallPaper{1}{imagenes/Portada_Roja.pdf}
@@ -135,9 +137,17 @@
       \vspace{1cm}
       {\fontsize{14}{10}\selectfont Fecha: \Fecha}
 
-      \vspace{5cm}
+      \vspace{.5cm}
       
-      % {\fontsize{12}{10}\selectfont Departamento}
+      % LICENCIA (DESACOPLADA)
+      {\Large \ccLogo}
+
+      \vspace{0.2cm}
+
+      {\small \Licencia}
+
+      \vspace{3.5cm}
+      
       \begin{figure}
         \centering
         \includegraphics[width=.2\textwidth]{imagenes/Logo.jpg}
